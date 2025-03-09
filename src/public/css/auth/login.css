@@ -1,61 +1,102 @@
-.content {
-    background-color: #F1ECE7;
-  }
-  
-  .login-form__inner {
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-  }
-  
-  .login-form__form {
-    padding: 64px 96px;
-    width: 40vw;
-    border: 1px solid #C5B9B0;
-    border-radius: 8px;
-    background-color: #FDFEFE;
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .login-form__form {
-      width: 60vw;
-    }
-  }
-  
-  .login-form__group {
-    margin-top: 32px;
-  }
-  
-  .login-form__group:first-of-type {
-    margin-top: 0;
-  }
-  
-  .login-form__label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .login-form__input {
-    display: block;
-    padding: 8px 12px;
-    width: 100%;
-    height: 48px;
-    border: none;
-    background-color: #F4F4F4;
-    color: #BEB1A6;
-    font-family: serif;
-  }
-  
-  .login-form__error-message {
-    color: #FF9494;
-  }
-  
-  .login-form__btn {
-    margin: 60px auto 0;
-  }
+.login-form__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 48px 0;
+}
 
-  .a{
-    display: block;
-    padding: 12px 12px;
-    text-align: center;
+/* フォームスタイル */
+.login-form__form {
+  padding: 64px 96px;
+  width: 50vw; /* 幅を広めに調整 */
+  max-width: 700px; /* 最大幅を700pxに */
+  border-radius: 8px;
+  background-color: #FFFFFF; /* 背景を完全な白に */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タブレット (1200px 以下) 用スタイル */
+@media screen and (max-width: 1200px) {
+  .login-form__form {
+      width: 60vw;
   }
+}
+
+/* モバイル (768px 以下) 用スタイル */
+@media screen and (max-width: 768px) {
+  .login-form__form {
+      width: 90vw;
+      padding: 32px 24px;
+  }
+}
+
+/* 各フォームグループの余白 */
+.login-form__group {
+  margin-bottom: 32px;
+}
+
+/* ラベルスタイル */
+.login-form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 入力フィールド */
+.login-form__input {
+  display: block;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #F4F4F4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* エラーメッセージ */
+.login-form__error-message {
+  color: #FF9494;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+/* 登録ボタン */
+.login-form__btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0; /* 高さを少し低めに調整 */
+  margin: 40px auto 0;
+  background-color: #FF6B6B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form__btn:hover {
+  background-color: #FF4949;
+}
+
+.login-form__btn:focus {
+  box-shadow: 0 0 5px rgba(255, 75, 75, 0.6);
+}
+
+/* リンクスタイル */
+.login-form__link {
+  display: block;
+  margin-top: 12px; /* ボタンとの余白を少し狭める */
+  color: #3498DB;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.login-form__link:hover {
+  text-decoration: underline;
+}
