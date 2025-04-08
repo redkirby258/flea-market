@@ -20,7 +20,6 @@ class CreateLikesTable extends Migration
             $table->timestamps();
 
             $table->unique(['user_id', 'product_id']); // 同じユーザーが同じ商品を複数回いいねできないように
-            
         });
     }
 

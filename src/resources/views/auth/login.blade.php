@@ -30,6 +30,12 @@
       </div>
       <input class="login-form__btn btn" type="submit" value="ログイン">
       <a class="login-form__link"href="/register">会員登録はこちら</a>
+      @if ($errors->has('email'))
+    <div class="alert alert-danger">
+        {{ $errors->first('email') }}
+    </div>
+@endif
+
     </form>
   </div>
 </div>
