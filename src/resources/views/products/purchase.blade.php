@@ -32,8 +32,8 @@
 
                 <div class="shipping-info">
                     <h3>配送先</h3>
-                    <p>〒 XXX-YYYY</p>
-                    <p>ここには住所と建物が入ります</p>
+                    <p>{{ $profile->phone_number }}</p>
+                    <p>{{ $profile->address }}{{ $profile->building }}</p>
                     <a href="#" class="change-address">変更する</a>
                 </div>
 

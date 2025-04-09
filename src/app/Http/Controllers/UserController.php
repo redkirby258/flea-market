@@ -25,7 +25,7 @@ class UserController extends Controller
             'password'=>Hash::make($request->password)
         ]);
         Auth::login($user);
-        return redirect('/profile');
+        return redirect('/profile/setup');
     }
 
     public function loginUser(LoginRequest $request){

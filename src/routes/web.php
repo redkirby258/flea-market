@@ -46,3 +46,7 @@ Route::post('/mypage/profile', [ProfileController::class, 'update'])->name('prof
 // ===========================
 Route::post('/like/{product}', [LikeController::class, 'toggleLike'])->name('like.toggle');
 Route::post('/comment', [CommentController::class, 'store'])->name('comments.store');
+
+Route::get('/profile/setup', [ProfileController::class, 'setup'])->name('profile.setup');
+Route::post('/profile/setup', [ProfileController::class, 'store'])->name('profile.store');
+

@@ -10,6 +10,29 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
 
+    public function setup()
+{
+    return view('setup');
+}
+
+    public function store(Request $request)
+    {
+        $request->validate([
+        'user_name' => 'required|string|max:255',
+        // 必要なバリデーションを追加
+        ]);
+
+        Profile::create([
+            'user_id' => Auth::id(),
+            'user_name' => $request->user_name,
+            'building' => $request->building,
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+            'profile_image' => $request->profile_image ?? null,
+        ]);
+
+        return redirect()->route('products.index'); // 任意の遷移先へ
+    }
     public function edit()
     {
         $user = Auth::user();
